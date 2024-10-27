@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StartupServices xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="QuickKart.PurchaseService_InstanceCount" Value="-1" />
+    <Parameter Name="QuickKart.CartService_PartitionCount" Value="1" />
+    <Parameter Name="QuickKart.CartService_MinReplicaSetSize" Value="3" />
+    <Parameter Name="QuickKart.CartService_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="QuickKart.ProductService_InstanceCount" Value="-1" />
+    <Parameter Name="QuickKart.UserService_InstanceCount" Value="-1" />
+  </Parameters>
+</StartupServices>

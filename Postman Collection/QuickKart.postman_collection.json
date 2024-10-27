@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "18245a2b-a127-4bd0-bfd8-1e6b0e7c0065",
+		"name": "QuickKart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2240862"
+	},
+	"item": [
+		{
+			"name": "ProductService",
+			"item": [
+				{
+					"name": "GetProductsByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Product/GetProductsByCategory?categoryId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Product",
+								"GetProductsByCategory"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductsByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Product/GetProductsByName?productName=BMW",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Product",
+								"GetProductsByName"
+							],
+							"query": [
+								{
+									"key": "productName",
+									"value": "BMW"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductQuantity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Product/GetProductQuantity?productId=P101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Product",
+								"GetProductQuantity"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "P101"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProductQuantity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Product/UpdateProductQuantity?productId=P101&quantitytoReduce=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Product",
+								"UpdateProductQuantity"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "P101"
+								},
+								{
+									"key": "quantitytoReduce",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PurchaseService",
+			"item": [
+				{
+					"name": "PurchaseProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailId\": \"hozefam1@gmail.com\",\r\n  \"cardObject\": {\r\n    \"cardNumber\": 1146665296881890,\r\n    \"nameOnCard\": \"Manuel\",\r\n    \"cardType\": \"M\",\r\n    \"cvvnumber\": 137,\r\n    \"expiryDate\": \"2025-03-18\",\r\n    \"balance\": 7282.00\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/Purchase/PurchaseProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"Purchase",
+								"PurchaseProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserService",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/login?emailId=Albert@gmail.com&password=LILAS@1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "emailId",
+									"value": "Albert@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "LILAS@1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/ValidateEmail?emailId=hozefam1@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"ValidateEmail"
+							],
+							"query": [
+								{
+									"key": "emailId",
+									"value": "hozefam1@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"EmailId\": \"hozefam1@gmail.com\",\r\n    \"UserPassword\": \"ABC@12345\",\r\n    \"Gender\": \"M\",\r\n    \"DateOfBirth\": \"1963-12-23\",\r\n    \"Address\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/RegisterUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"RegisterUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
